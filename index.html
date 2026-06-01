@@ -1,23 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Syadad Nabil Mudzafar - Bisnis Konsultan PT. Rifan Financindo Berjangka</title>
+    <title>Syadad Nabil Mudzafar - Telegram Profile Card</title>
     
-    <!-- Metadata untuk SEO & Sharing -->
-    <meta name="description" content="Profil Bisnis Digital Syadad Nabil Mudzafar - Bisnis Konsultan di PT. Rifan Financindo Berjangka. Hubungi via WhatsApp, Telegram, Instagram, atau X.">
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Profil Bisnis Digital Syadad Nabil Mudzafar - Bisnis Konsultan PT. Rifan Financindo Berjangka. Hubungi langsung via Telegram, WhatsApp, atau media sosial lainnya.">
     <meta name="author" content="Syadad Nabil Mudzafar">
     
-    <!-- Favicon / Shortcut Icon menggunakan img1.jpg -->
-    <link rel="shortcut icon" href="img1.png" type="image/jpeg">
+    <!-- Shortcut Icon (Favicon) menggunakan format PNG -->
+    <link rel="shortcut icon" href="img1.png" type="image/png">
     <link rel="apple-touch-icon" href="img1.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -26,15 +25,16 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            gold: '#D4AF37',
-                            silver: '#E5E7EB',
-                            glass: 'rgba(255, 255, 255, 0.08)',
-                            glassBorder: 'rgba(255, 255, 255, 0.15)',
+                        tg: {
+                            bg: '#000000',
+                            cardBg: '#1c1c1e',
+                            cardBgHover: '#2c2c2e',
+                            textMuted: '#8e8e93',
+                            blue: '#0a84ff',
+                            separator: '#2c2c2e'
                         }
                     }
                 }
@@ -44,369 +44,348 @@
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background: #030712;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #000000;
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Latar Belakang Liquid yang Bergerak Lambat (Apple Style) */
-        .ambient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
+        /* Blur transisi halus di bawah foto profil */
+        .hero-gradient {
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0) 60%, 
+                rgba(0, 0, 0, 0.4) 75%,
+                rgba(0, 0, 0, 0.85) 90%, 
+                #000000 100%
+            );
         }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.3;
-            mix-blend-mode: screen;
-            animation: moveBlob 30s infinite alternate ease-in-out;
-        }
-
-        .blob-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, #1e40af 0%, #1e3a8a 100%);
-            top: -5%;
-            left: -10%;
-            animation-duration: 25s;
-        }
-
-        .blob-2 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, #0369a1 0%, #0c4a6e 100%);
-            bottom: -10%;
-            right: -10%;
-            animation-duration: 32s;
-            animation-delay: 2s;
-        }
-
-        .blob-3 {
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, #581c87 0%, #3b0764 100%);
-            top: 35%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-duration: 28s;
-            animation-delay: 4s;
-        }
-
-        @keyframes moveBlob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(80px, 60px) scale(1.05); }
-            100% { transform: translate(-40px, -40px) scale(0.95); }
-        }
-
-        /* Efek Glassmorphism Premium */
-        .liquid-glass {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+        /* Gaya Khusus Tombol Aksi Telegram */
+        .tg-action-btn {
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
-                        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+            transition: all 0.2s ease-in-out;
         }
 
-        /* Spesifik Header Telegram Blur Efek */
-        .telegram-header {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        .tg-action-btn:active {
+            transform: scale(0.92);
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        /* Transisi kilau tombol */
-        .glass-btn {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Animasi Bottom Sheet / Slide-up Modal */
+        .bottom-sheet {
+            transition: transform 0.3s cubic-bezier(0.1, 0.76, 0.55, 0.94);
+        }
+        .bottom-sheet.hidden-state {
+            transform: translateY(100%);
+        }
+
+        /* Gaya daftar list ala iOS/Telegram */
+        .tg-list-item {
             position: relative;
-            overflow: hidden;
         }
-
-        .glass-btn::after {
+        .tg-list-item:not(:last-child)::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.08) 50%, transparent 55%);
-            transform: rotate(45deg);
-            transition: transform 0.6s ease;
-            pointer-events: none;
-        }
-
-        .glass-btn:hover::after {
-            transform: translate(50%, 50%) rotate(45deg);
-        }
-
-        .glass-btn:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.06);
         }
     </style>
 </head>
-<body class="text-white min-h-screen pb-12 flex flex-col items-center">
+<body class="text-white min-h-screen flex flex-col items-center pb-12">
 
-    <!-- Ambient Liquid Lighting Background -->
-    <div class="ambient-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
+    <!-- CONTAINER UTAMA -->
+    <div class="w-full max-w-md bg-black min-h-screen relative flex flex-col">
 
-    <!-- STICKY HEADER (Telegram & Apple Style Blur) -->
-    <header class="telegram-header fixed top-0 left-0 right-0 z-50 py-3.5 px-4 md:px-8 flex justify-center">
-        <div class="w-full max-w-md flex items-center justify-between">
+        <!-- HEADER TOP BAR (Arrow Back & Share) -->
+        <div class="absolute top-4 left-4 right-4 z-30 flex justify-between items-center pointer-events-auto">
+            <!-- Back Button -->
+            <button class="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center backdrop-blur-md text-white active:scale-95 transition-transform" onclick="window.close();">
+                <i class="fa-solid fa-chevron-left text-lg"></i>
+            </button>
             
-            <!-- Left Profile Section -->
-            <div class="flex items-center gap-3">
-                <!-- Profile Image (IMG_1676.jpeg) dengan fallback inisial premium -->
-                <div class="relative w-11 h-11 rounded-full border border-white/20 overflow-hidden shadow-inner flex items-center justify-center bg-gradient-to-tr from-slate-800 to-slate-900" id="profileContainer">
-                    <img src="IMG_1676.jpeg" alt="Syadad Nabil Mudzafar" class="w-full h-full object-cover" onerror="handleProfileError(this)">
-                </div>
-                
-                <!-- Status & Name -->
-                <div class="text-left">
-                    <h2 class="text-sm font-bold font-jakarta tracking-tight leading-none text-slate-100 flex items-center gap-1.5">
-                        Syadad Nabil Mudzafar
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block shadow-sm shadow-emerald-500/50"></span>
-                    </h2>
-                    <p class="text-[11px] text-emerald-400 font-medium tracking-wide mt-1">online</p>
-                </div>
-            </div>
-
-            <!-- Right Telegram Action Buttons -->
-            <div class="flex items-center gap-2">
-                <!-- Search Icon (Decorative Telegram Style) -->
-                <button class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors border border-white/5 text-slate-400 hover:text-white" onclick="focusSearchEffect()">
-                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
-                </button>
-                <!-- Telegram Share Menu -->
-                <button class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors border border-white/5 text-slate-400 hover:text-white" onclick="shareProfile()">
-                    <i class="fa-solid fa-ellipsis-vertical text-xs"></i>
-                </button>
-            </div>
-
+            <!-- Share Button -->
+            <button class="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-sm font-semibold text-white active:scale-95 transition-transform" onclick="shareProfile()">
+                Share
+            </button>
         </div>
-    </header>
 
-    <!-- SPACER FOR STICKY HEADER -->
-    <div class="h-20 w-full"></div>
+        <!-- HERO IMAGE SECTION -->
+        <div class="relative w-full h-[480px] overflow-hidden bg-zinc-900">
+            <!-- Profile Image (IMG_1676.jpeg) -->
+            <img src="IMG_1676.jpeg" alt="Syadad Nabil Mudzafar" class="w-full h-full object-cover" id="heroImage" onerror="handleHeroError(this)">
+            
+            <!-- Hero Gradient Overlay -->
+            <div class="absolute inset-0 hero-gradient"></div>
 
-    <!-- MAIN INTERACTIVE CONTAINER -->
-    <main class="relative z-10 w-full max-w-md px-4 mt-4 flex flex-col items-center">
-        
-        <!-- CARD DETAIL UTAMA (Tampilan Statis Tanpa Animasi Flip) -->
-        <section class="w-full rounded-2xl liquid-glass overflow-hidden p-6 mb-6 relative">
-            <!-- Top Light Highlight -->
-            <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            <!-- Profile Info (Nama & Status) -->
+            <div class="absolute bottom-6 left-5 right-5 z-20">
+                <h1 class="text-[28px] font-bold tracking-tight font-jakarta leading-tight drop-shadow-md">
+                    Syadad Nabil Mudzafar
+                </h1>
+                <p class="text-sm text-zinc-300 font-medium tracking-wide mt-1 drop-shadow">
+                    terlihat baru-baru ini
+                </p>
+            </div>
+        </div>
 
-            <!-- Corporate Identity Header -->
-            <div class="flex justify-between items-start pb-4 border-b border-white/10 mb-4">
-                <div class="flex items-center gap-3">
-                    <!-- Corporate Logo (img1.jpg dengan fallback cerdas) -->
-                    <div class="relative w-10 h-10 rounded-xl overflow-hidden bg-white/10 border border-white/20 flex items-center justify-center shadow-md" id="logoContainer">
-                        <img src="img1.png" alt="Logo PT. Rifan Financindo" class="w-full h-full object-cover" onerror="handleLogoError(this)">
+        <!-- ACTION BUTTONS ROW (Hubungi, Telegram, Instagram, X, Lainnya) -->
+        <div class="px-4 -mt-3 mb-6 z-20">
+            <div class="grid grid-cols-5 gap-2">
+                <!-- Hubungi (WhatsApp Sheet Trigger) -->
+                <button onclick="openContactSheet()" class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl tg-action-btn flex items-center justify-center text-white mb-1.5 shadow-lg">
+                        <i class="fa-solid fa-phone text-base"></i>
                     </div>
-                    <div class="text-left">
-                        <p class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold leading-none">MEMBER OF</p>
-                        <h4 class="text-xs font-bold text-white tracking-wide leading-tight">PT. RIFAN FINANCINDO BERJANGKA</h4>
+                    <span class="text-[10px] text-tg-textMuted font-medium">hubungi</span>
+                </button>
+
+                <!-- Telegram -->
+                <a href="https://t.me/gus_adad" target="_blank" class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl tg-action-btn flex items-center justify-center text-[#229ED9] mb-1.5 shadow-lg">
+                        <i class="fa-brands fa-telegram text-lg"></i>
                     </div>
-                </div>
-                <!-- Verified Badge -->
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 flex items-center gap-1 backdrop-blur-sm font-semibold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> VERIFIED
-                </span>
+                    <span class="text-[10px] text-tg-textMuted font-medium">telegram</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/gus_adad?igsh=MTRkajNvNmJvaGF6bw%3D%3D&utm_source=qr" target="_blank" class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl tg-action-btn flex items-center justify-center text-pink-400 mb-1.5 shadow-lg">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </div>
+                    <span class="text-[10px] text-tg-textMuted font-medium">instagram</span>
+                </a>
+
+                <!-- X (Menggunakan Vektor SVG Murni untuk Menjamin Tampilan 100% Sempurna) -->
+                <a href="https://x.com/gus_adadd?s=21" target="_blank" class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl tg-action-btn flex items-center justify-center text-white mb-1.5 shadow-lg">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-[10px] text-tg-textMuted font-medium">x platform</span>
+                </a>
+
+                <!-- Lainnya (Salin Link Profil) -->
+                <button onclick="copyProfileLink()" class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl tg-action-btn flex items-center justify-center text-white mb-1.5 shadow-lg">
+                        <i class="fa-solid fa-ellipsis text-base"></i>
+                    </div>
+                    <span class="text-[10px] text-tg-textMuted font-medium">lainnya</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- DETAIL KOTAK INFORMASI TELEGRAM STYLE -->
+        <div class="px-4 space-y-4">
+            
+            <!-- GRUP 1: Bio & Slogan -->
+            <div class="bg-tg-cardBg rounded-2xl p-4 text-left">
+                <span class="text-[11px] text-tg-blue font-semibold uppercase tracking-wider block mb-1">Slogan Utama</span>
+                <p class="text-[15px] text-white leading-relaxed font-medium">"Strive for solid future."</p>
+                <p class="text-xs text-tg-textMuted mt-1.5">Slogan Perusahaan</p>
             </div>
 
-            <!-- Profile Deskripsi Singkat -->
-            <div class="text-left space-y-4">
-                <!-- Jabatan & Slogan -->
+            <!-- GRUP 2: Detail Bisnis Pialang -->
+            <div class="bg-tg-cardBg rounded-2xl p-4 text-left space-y-3.5">
+                <div class="flex items-start gap-3">
+                    <!-- Logo Perusahaan menggunakan img1.png -->
+                    <div class="relative w-10 h-10 rounded-xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0" id="logoContainer">
+                        <img src="img1.png" alt="Logo" class="w-full h-full object-cover" onerror="handleLogoError(this)">
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-tg-textMuted font-medium uppercase tracking-wider block leading-none">Nama Pialang</span>
+                        <h3 class="text-base font-bold text-white mt-1 leading-snug">PT. RIFAN FINANCINDO BERJANGKA</h3>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/5 pt-3 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] text-tg-textMuted font-medium uppercase tracking-wider block">No. Izin Usaha</span>
+                        <p class="text-xs font-semibold text-slate-200 mt-1">08/BAPPEBTI/SI/XII/2000</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-tg-textMuted font-medium uppercase tracking-wider block">No. Izin SPA</span>
+                        <p class="text-xs font-semibold text-slate-200 mt-1">1162/BAPPEBTI/SP/5/2007</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRUP 3: Nomor Telepon & Kontak Personal -->
+            <div class="bg-tg-cardBg rounded-2xl text-left overflow-hidden">
+                <div class="p-4 border-b border-white/5">
+                    <span class="text-[11px] text-tg-blue font-semibold uppercase tracking-wider block mb-2">WhatsApp Personal</span>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/6285780085291" class="block group active:opacity-70 transition-opacity">
+                            <p class="text-[15px] font-semibold text-white tracking-wide">+62 857 8008 5291</p>
+                            <span class="text-xs text-tg-textMuted block mt-0.5">WhatsApp Hubungi Personal 1</span>
+                        </a>
+                        <div class="h-[1px] bg-white/5"></div>
+                        <a href="https://wa.me/6285780085292" class="block group active:opacity-70 transition-opacity">
+                            <p class="text-[15px] font-semibold text-white tracking-wide">+62 857 8008 5292</p>
+                            <span class="text-xs text-tg-textMuted block mt-0.5">WhatsApp Hubungi Personal 2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRUP 4: Informasi Kontak & Layanan Perusahaan -->
+            <div class="bg-tg-cardBg rounded-2xl text-left overflow-hidden">
+                <div class="p-4 space-y-3">
+                    <span class="text-[11px] text-tg-blue font-semibold uppercase tracking-wider block mb-1">Saluran Perusahaan</span>
+                    
+                    <div class="tg-list-item py-2">
+                        <p class="text-[14px] font-semibold text-slate-200">021-30056300</p>
+                        <span class="text-[11px] text-tg-textMuted">Nomor Telepon Kantor</span>
+                    </div>
+
+                    <div class="tg-list-item py-2">
+                        <p class="text-[14px] font-semibold text-slate-200">021-30056200</p>
+                        <span class="text-[11px] text-tg-textMuted">Nomor Fax Kantor</span>
+                    </div>
+
+                    <div class="tg-list-item py-2">
+                        <a href="mailto:corporate@rifan-financindo-berjangka.co.id" class="block hover:text-tg-blue">
+                            <p class="text-[14px] font-semibold text-slate-200 break-all">corporate@rifan-financindo-berjangka.co.id</p>
+                            <span class="text-[11px] text-tg-textMuted">Surel Resmi / Email</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="http://www.rf-berjangka.com" target="_blank" class="block text-tg-blue hover:underline">
+                            <p class="text-[14px] font-semibold">www.rf-berjangka.com</p>
+                            <span class="text-[11px] text-tg-textMuted">Website Resmi</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRUP 5: Alamat Lengkap Kantor & Map Info -->
+            <div class="bg-tg-cardBg rounded-2xl p-4 text-left space-y-3">
                 <div>
-                    <h3 class="text-lg font-bold font-jakarta text-white tracking-tight">Syadad Nabil Mudzafar</h3>
-                    <p class="text-xs tracking-wider uppercase text-blue-300 font-bold mt-0.5">Bisnis Konsultan</p>
-                    <p class="text-xs italic text-slate-400 mt-2 font-medium border-l-2 border-blue-500/50 pl-2">
-                        "Strive for solid future."
+                    <span class="text-[11px] text-tg-blue font-semibold uppercase tracking-wider block mb-1">Lokasi Kantor Utama</span>
+                    <p class="text-sm font-semibold text-white">AXA Tower Lt. 25, 23, 30, & 35</p>
+                    <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                        Axa Tower, Jl. Prof. DR. Satrio Kav. 18, Kuningan, Setiabudi, Jakarta Selatan, DKI Jakarta 12940
                     </p>
                 </div>
 
-                <!-- Detail Alamat Kantor Lengkap -->
-                <div class="bg-white/5 rounded-xl p-4 border border-white/5 space-y-2">
-                    <div class="flex gap-2.5 items-start text-xs text-slate-300">
-                        <i class="fa-solid fa-building text-blue-400 mt-0.5 w-4 text-center"></i>
-                        <div>
-                            <p class="font-semibold text-white">AXA Tower Lt. 25</p>
-                            <p class="text-[11px] leading-relaxed text-slate-400 mt-0.5">
-                                Jl. Prof. DR. Satrio Kav. 18, Lantai 30, 35, 23 dan 25, Kuningan, Setiabudi, Jakarta Selatan, DKI Jakarta 12940
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-2.5 items-center text-[10px] text-blue-300 border-t border-white/5 pt-2 mt-1">
-                        <i class="fa-solid fa-network-wired w-4 text-center"></i>
-                        <span>Multi-lantai Operasional: 23, 25, 30, & 35</span>
-                    </div>
+                <div class="border-t border-white/5 pt-3">
+                    <button onclick="copyAddress()" class="w-full py-2 rounded-xl bg-white/5 active:bg-white/10 border border-white/5 text-xs font-semibold text-tg-blue flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-regular fa-copy" id="copyIcon"></i> <span id="copyText">Salin Alamat Lengkap</span>
+                    </button>
                 </div>
-
-                <!-- Tombol Salin Alamat Terintegrasi -->
-                <button id="copyAddressBtn" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-blue-500/20 text-xs font-semibold text-blue-300 hover:text-white border border-white/10 hover:border-blue-500/30 flex items-center justify-center gap-2 transition-all duration-300">
-                    <i class="fa-regular fa-copy" id="copyIcon"></i> <span id="copyText">Salin Alamat Kantor</span>
-                </button>
             </div>
-        </section>
 
-        <!-- SOCIAL & CHAT BUTTONS LIST -->
-        <section class="w-full space-y-3">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 text-left pl-1">Saluran Komunikasi</h3>
-
-            <!-- WhatsApp Chat 1 -->
-            <a href="https://wa.me/6285780085291?text=Halo%20Syadad%20Nabil%2C%20saya%20ingin%20berkonsultasi%20mengenai%20bisnis." 
-               target="_blank" 
-               class="glass-btn w-full px-5 py-4 rounded-xl flex items-center justify-between group">
-                <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-400 font-medium leading-none mb-1">WhatsApp Chat 1</p>
-                        <p class="text-sm font-bold text-white tracking-wide">0857-8008-5291</p>
-                    </div>
-                </div>
-                <div class="text-emerald-400 group-hover:translate-x-1 transition-transform duration-300">
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </div>
-            </a>
-
-            <!-- WhatsApp Chat 2 -->
-            <a href="https://wa.me/6285780085292?text=Halo%20Syadad%20Nabil%2C%20saya%20ingin%20berkonsultasi." 
-               target="_blank" 
-               class="glass-btn w-full px-5 py-4 rounded-xl flex items-center justify-between group">
-                <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-400 font-medium leading-none mb-1">WhatsApp Chat 2</p>
-                        <p class="text-sm font-bold text-white tracking-wide">0857-8008-5292</p>
-                    </div>
-                </div>
-                <div class="text-emerald-400 group-hover:translate-x-1 transition-transform duration-300">
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </div>
-            </a>
-
-            <!-- Telegram Messenger -->
-            <a href="https://t.me/gus_adad" 
-               target="_blank" 
-               class="glass-btn w-full px-5 py-4 rounded-xl flex items-center justify-between group">
-                <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center border border-sky-500/30 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300 shadow-md">
-                        <i class="fa-brands fa-telegram text-xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-400 font-medium leading-none mb-1">Telegram Messenger</p>
-                        <p class="text-sm font-bold text-white tracking-wide">@gus_adad</p>
-                    </div>
-                </div>
-                <div class="text-sky-400 group-hover:translate-x-1 transition-transform duration-300">
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </div>
-            </a>
-
-            <!-- Media Sosial Header -->
-            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 text-left pl-1 pt-4">Media Sosial & Portofolio</h3>
-
-            <!-- Grid for Instagram & X -->
-            <div class="grid grid-cols-2 gap-3">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/gus_adad?igsh=MTRkajNvNmJvaGF6bw%3D%3D&utm_source=qr" 
-                   target="_blank" 
-                   class="glass-btn px-4 py-4 rounded-xl flex flex-col justify-between items-start group relative">
-                    <div class="w-10 h-10 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center border border-pink-500/30 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300 mb-3 shadow-md">
-                        <i class="fa-brands fa-instagram text-lg"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-[10px] text-slate-400 font-medium leading-none mb-1">Instagram</p>
-                        <p class="text-xs font-bold text-white tracking-wide">@gus_adad</p>
-                    </div>
-                    <div class="absolute right-4 bottom-4 text-pink-400 group-hover:translate-x-1 transition-transform duration-300">
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </div>
-                </a>
-
-                <!-- X (Twitter) -->
-                <a href="https://x.com/gus_adadd?s=21" 
-                   target="_blank" 
-                   class="glass-btn px-4 py-4 rounded-xl flex flex-col justify-between items-start group relative">
-                    <div class="w-10 h-10 rounded-lg bg-slate-300/20 text-white flex items-center justify-center border border-white/20 group-hover:bg-white group-hover:text-black transition-all duration-300 mb-3 shadow-md">
-                        <i class="fa-brands fa-x-twitter text-lg"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-[10px] text-slate-400 font-medium leading-none mb-1">X Platform</p>
-                        <p class="text-xs font-bold text-white tracking-wide">@gus_adadd</p>
-                    </div>
-                    <div class="absolute right-4 bottom-4 text-slate-300 group-hover:translate-x-1 transition-transform duration-300">
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- TOAST NOTIFICATION BOX -->
-        <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 scale-90 opacity-0 pointer-events-none transition-all duration-300 bg-emerald-500/90 text-white font-medium text-xs px-5 py-3 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-md border border-emerald-400/30 z-50">
-            <i class="fa-regular fa-circle-check text-sm"></i>
-            <span>Alamat berhasil disalin ke papan klip!</span>
         </div>
 
-        <!-- FOOTER -->
-        <footer class="mt-8 text-center text-[11px] text-slate-500 tracking-wider">
-            <p>© 2026 PT. Rifan Financindo Berjangka</p>
-            <p class="mt-1">Designed in Apple Liquid Glass & Telegram Layout Style</p>
-        </footer>
+        <!-- FOOTER LOGO & COPYRIGHT -->
+        <div class="py-10 text-center space-y-1">
+            <p class="text-[11px] text-tg-textMuted uppercase tracking-wider font-semibold">PT. Rifan Financindo Berjangka</p>
+            <p class="text-[10px] text-zinc-600">Terdaftar & Diawasi oleh BAPPEBTI</p>
+        </div>
 
-    </main>
+    </div>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <!-- IOS / BOTTOM ACTION SHEET (WhatsApp Selector) -->
+    <div id="contactSheetOverlay" class="fixed inset-0 z-50 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm" onclick="closeContactSheet()">
+        
+        <div id="contactSheet" class="absolute bottom-0 left-0 right-0 max-w-md mx-auto bg-[#1c1c1e] rounded-t-2xl p-4 bottom-sheet hidden-state space-y-2.5 shadow-2xl z-50" onclick="event.stopPropagation()">
+            <!-- Sheet Handle -->
+            <div class="w-10 h-1 bg-zinc-600 rounded-full mx-auto mb-2"></div>
+            
+            <h3 class="text-sm font-semibold text-tg-textMuted text-center py-1">Pilih Nomor WhatsApp</h3>
+            
+            <!-- WhatsApp 1 Link -->
+            <a href="https://wa.me/6285780085291?text=Halo%20Syadad%20Nabil%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20bisnis." target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-white/5 active:bg-white/10 flex items-center justify-between transition-colors">
+                <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-sm font-bold text-white leading-none">Syadad Nabil - Kontak 1</p>
+                        <p class="text-xs text-tg-textMuted mt-1">0857-8008-5291</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-tg-textMuted"></i>
+            </a>
+
+            <!-- WhatsApp 2 Link -->
+            <a href="https://wa.me/6285780085292?text=Halo%20Syadad%20Nabil%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20bisnis." target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-white/5 active:bg-white/10 flex items-center justify-between transition-colors">
+                <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-sm font-bold text-white leading-none">Syadad Nabil - Kontak 2</p>
+                        <p class="text-xs text-tg-textMuted mt-1">0857-8008-5292</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-tg-textMuted"></i>
+            </a>
+
+            <!-- Close Button -->
+            <button onclick="closeContactSheet()" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-bold text-white transition-colors">
+                Batalkan
+            </button>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST BOX -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 scale-90 opacity-0 pointer-events-none transition-all duration-300 bg-zinc-800/90 text-white font-medium text-xs px-5 py-3 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-md border border-white/10 z-50">
+        <i class="fa-regular fa-circle-check text-emerald-400 text-sm"></i>
+        <span id="toastMessage">Alamat disalin ke papan klip!</span>
+    </div>
+
+    <!-- JAVASCRIPT CONTROL LOGIC -->
     <script>
-        const copyBtn = document.getElementById('copyAddressBtn');
+        const contactSheetOverlay = document.getElementById('contactSheetOverlay');
+        const contactSheet = document.getElementById('contactSheet');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
 
-        // Fallback untuk foto profil (IMG_1676.jpeg jika belum ada)
-        function handleProfileError(img) {
+        // Fallback Foto Hero jika kosong/belum siap
+        function handleHeroError(img) {
             img.style.display = 'none';
-            const container = document.getElementById('profileContainer');
-            container.className = "w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-700 flex items-center justify-center border border-white/20 shadow-md";
-            container.innerHTML = '<span class="text-sm font-bold tracking-tight text-white">SNM</span>';
+            const parent = img.parentElement;
+            parent.className = "relative w-full h-[480px] bg-gradient-to-br from-indigo-950 via-slate-900 to-black flex items-center justify-center";
+            const initialDiv = document.createElement('div');
+            initialDiv.className = "text-center";
+            initialDiv.innerHTML = `
+                <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-tg-blue to-indigo-500 mx-auto flex items-center justify-center shadow-lg border border-white/20 mb-3">
+                    <span class="text-3xl font-extrabold text-white">SNM</span>
+                </div>
+                <p class="text-xs text-tg-textMuted">Syadad Nabil Mudzafar</p>
+            `;
+            parent.appendChild(initialDiv);
         }
 
-        // Fallback untuk logo perusahaan (img1.jpg jika belum ada)
+        // Fallback Logo Pialang jika file img1.png belum siap
         function handleLogoError(img) {
             img.style.display = 'none';
             const container = document.getElementById('logoContainer');
-            container.className = "w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-md border border-white/10";
+            container.className = "w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-md border border-white/10 flex-shrink-0";
             container.innerHTML = '<i class="fa-solid fa-chart-line text-white text-lg"></i>';
         }
 
-        // Fitur menyalin alamat kantor
-        copyBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+        // Penanganan Bottom Sheet (WhatsApp Selector)
+        function openContactSheet() {
+            contactSheetOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            contactSheetOverlay.classList.add('opacity-100');
+            contactSheet.classList.remove('hidden-state');
+        }
+
+        // Tutup Bottom Sheet
+        function closeContactSheet() {
+            contactSheetOverlay.classList.add('opacity-0', 'pointer-events-none');
+            contactSheetOverlay.classList.remove('opacity-100');
+            contactSheet.classList.add('hidden-state');
+        }
+
+        // Menyalin Alamat Kantor Lengkap
+        function copyAddress() {
+            const addressText = "PT. RIFAN FINANCINDO BERJANGKA, AXA Tower Lt. 25, Jl. Prof. DR. Satrio Kav. 18 Lantai 30, 35, 23 dan 25, Kuningan, Setiabudi, Jakarta Selatan, DKI Jakarta 12940";
             
-            const addressText = "PT. Rifan Financindo Berjangka, AXA Tower Lt. 25, Jl. Prof. DR. Satrio Kav. 18, Lantai 30, 35, 23 dan 25, Kuningan, Setiabudi, Jakarta Selatan, DKI Jakarta 12940";
-            
-            // Logika salin cadangan
             const tempInput = document.createElement("textarea");
             tempInput.value = addressText;
             document.body.appendChild(tempInput);
@@ -416,44 +395,34 @@
 
             const copyIcon = document.getElementById('copyIcon');
             const copyText = document.getElementById('copyText');
-            
-            copyIcon.className = "fa-solid fa-check text-emerald-400 animate-bounce";
-            copyText.textContent = "Alamat Tersalin!";
-            copyText.classList.add("text-emerald-400");
+            copyIcon.className = "fa-solid fa-check text-emerald-400";
+            copyText.textContent = "Alamat Berhasil Tersalin!";
+            copyText.className = "text-emerald-400";
 
-            const toast = document.getElementById('toast');
-            toast.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
-            toast.classList.add('opacity-100', 'scale-100');
+            showToast("Alamat kantor berhasil disalin!");
 
             setTimeout(() => {
                 copyIcon.className = "fa-regular fa-copy";
-                copyText.textContent = "Salin Alamat Kantor";
-                copyText.classList.remove("text-emerald-400");
-                
-                toast.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
-                toast.classList.remove('opacity-100', 'scale-100');
-            }, 2500);
-        });
-
-        // Efek Aksi Klik Hiasan di Header Telegram
-        function focusSearchEffect() {
-            const toast = document.getElementById('toast');
-            toast.innerHTML = '<i class="fa-solid fa-circle-info text-sm"></i> <span>Gunakan tombol saluran di bawah untuk berkomunikasi.</span>';
-            toast.className = toast.className.replace("bg-emerald-500/90", "bg-blue-600/90");
-            toast.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
-            toast.classList.add('opacity-100', 'scale-100');
-            
-            setTimeout(() => {
-                toast.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
-                toast.classList.remove('opacity-100', 'scale-100');
-                // Kembalikan ke format semula setelah hilang
-                setTimeout(() => {
-                    toast.className = toast.className.replace("bg-blue-600/90", "bg-emerald-500/90");
-                    toast.innerHTML = '<i class="fa-regular fa-circle-check text-sm"></i> <span>Alamat berhasil disalin ke papan klip!</span>';
-                }, 300);
+                copyText.textContent = "Salin Alamat Lengkap";
+                copyText.className = "";
             }, 2500);
         }
 
+        // Menyalin Tautan Link Profil
+        function copyProfileLink() {
+            const link = window.location.href;
+            
+            const tempInput = document.createElement("textarea");
+            tempInput.value = link;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            showToast("Tautan profil disalin ke clipboard!");
+        }
+
+        // Fitur Share Profil native OS
         function shareProfile() {
             if (navigator.share) {
                 navigator.share({
@@ -462,30 +431,22 @@
                     url: window.location.href
                 }).catch(console.error);
             } else {
-                // Clipboard fallback jika share API tidak didukung browser
-                const tempInput = document.createElement("textarea");
-                tempInput.value = window.location.href;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand("copy");
-                document.body.removeChild(tempInput);
-
-                const toast = document.getElementById('toast');
-                toast.innerHTML = '<i class="fa-solid fa-share-nodes text-sm"></i> <span>Tautan profil disalin ke papan klip!</span>';
-                toast.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
-                toast.classList.add('opacity-100', 'scale-100');
-
-                setTimeout(() => {
-                    toast.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
-                    toast.classList.remove('opacity-100', 'scale-100');
-                    setTimeout(() => {
-                        toast.innerHTML = '<i class="fa-regular fa-circle-check text-sm"></i> <span>Alamat berhasil disalin ke papan klip!</span>';
-                    }, 300);
-                }, 2500);
+                copyProfileLink();
             }
+        }
+
+        // Menampilkan Notifikasi Toast
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'scale-100');
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
+                toast.classList.remove('opacity-100', 'scale-100');
+            }, 2500);
         }
     </script>
 </body>
 </html>
-
 
